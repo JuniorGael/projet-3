@@ -45,6 +45,7 @@ header .logo {
 
 main {
   width: 100%;
+  height: 100%;
 }
 main .city-location {
   height: 45px;
@@ -72,9 +73,11 @@ main .reservation-container h2 {
   letter-spacing: 0.05rem;
 }
 main .reservation-container p {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 20px;
   letter-spacing: 0.05rem;
   margin-top: 0;
+  font-weight: 600;
 }
 main .reservation-container .btn {
   width: 85%;
@@ -93,5 +96,50 @@ main .functioning-container {
 main .functioning-container h2 {
   font-size: 1.5rem;
   text-transform: capitalize;
-  margin-top: 0;
+  margin: 0;
+}
+main .functioning-container__button {
+  margin: 15px auto 30px;
+}
+main .functioning-container__button .btn {
+  width: 100%;
+  height: 90px;
+  border-radius: 30px;
+  border: transparent;
+  box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .functioning-container__button .btn:hover {
+  background-color: #f7f0ff;
+  color: #9356dc;
+}
+main .functioning-container__button .btn .fa-1,
+main .functioning-container__button .btn .fa-2,
+main .functioning-container__button .btn .fa-3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 30px;
+  color: #fff;
+  background-color: #9356dc;
+}
+main .functioning-container__button .btn .fa-mobile-screen-button,
+main .functioning-container__button .btn .fa-list-ul,
+main .functioning-container__button .btn .fa-store {
+  padding-right: 25px;
+}
+main .functioning-container__button .btn span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+main .card-container {
+  margin: 0 15px;
 }/*# sourceMappingURL=index.css.map */
