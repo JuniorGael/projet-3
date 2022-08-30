@@ -1,1 +1,97 @@
-/*# sourceMappingURL=index.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Shrikhand", cursive;
+}
+
+span,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: #99e2d0;
+}
+
+header {
+  height: 80px;
+  box-shadow: -2px 4px 10px #e5e4e4;
+}
+header .logo {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+}
+main .city-location {
+  height: 45px;
+  background: #f8f6f6;
+  margin-top: 6px;
+}
+main .city-location span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: 8px;
+}
+main .city-location span .fa-location-dot {
+  padding-right: 15px;
+}
+main .reservation-container {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+main .reservation-container h2 {
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 0.05rem;
+}
+main .reservation-container p {
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  margin-top: 0;
+}
+main .reservation-container .btn {
+  width: 85%;
+  height: 50px;
+  border-radius: 50px;
+  margin: 20px auto 50px;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  border: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+main .functioning-container {
+  margin: 0 15px;
+}
+main .functioning-container h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-top: 0;
+}/*# sourceMappingURL=index.css.map */

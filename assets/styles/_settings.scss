@@ -1,0 +1,38 @@
+$font1: 'Shrikhand', cursive;
+$font2: 'Roboto', sans-serif;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font1;
+}
+
+span,
+p {
+    font-family: $font2;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:visited {
+    color: $tertiary-color;
+}

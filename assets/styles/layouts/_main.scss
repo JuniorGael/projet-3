@@ -1,0 +1,61 @@
+main {
+    width: 100%;
+
+    .city-location {
+        height: 45px;
+        background: #f8f6f6;
+        margin-top: 6px;
+        
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            padding: 8px;
+
+            .fa-location-dot {
+                padding-right: 15px;
+            }
+        }
+    }
+
+    .reservation-container {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 1.5rem;
+            line-height: 30px;
+            letter-spacing: 0.05rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            letter-spacing: 0.05rem;
+            margin-top: 0;
+        }
+
+        .btn {
+            width: 85%;
+            height: 50px;
+            border-radius: 50px;
+            margin: 20px auto 50px;
+            background: linear-gradient(to top, $primary-color, $secondary-color);
+            border: transparent;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    }
+
+    .functioning-container {
+        margin: 0 15px;
+
+        h2 {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            margin-top: 0;
+        }
+    }
+}
