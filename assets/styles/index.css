@@ -28,10 +28,6 @@ a {
   color: #000;
 }
 
-a:visited {
-  color: #99e2d0;
-}
-
 header {
   height: 80px;
   box-shadow: -2px 4px 10px #e5e4e4;
@@ -81,29 +77,30 @@ main .reservation-container p {
 }
 main .reservation-container .btn {
   width: 85%;
-  height: 50px;
+  height: 70px;
   border-radius: 50px;
   margin: 20px auto 50px;
   background: linear-gradient(to top, #9356dc, #ff79da);
   border: transparent;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 main .functioning-container {
   margin: 0 15px;
 }
 main .functioning-container h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-transform: capitalize;
   margin: 0;
 }
 main .functioning-container__button {
+  width: 100%;
   margin: 15px auto 30px;
 }
 main .functioning-container__button .btn {
-  width: 100%;
-  height: 90px;
+  width: 350px;
+  height: 100px;
   border-radius: 30px;
   border: transparent;
   box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
@@ -112,14 +109,15 @@ main .functioning-container__button .btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 main .functioning-container__button .btn:hover {
   background-color: #f7f0ff;
+}
+main .functioning-container__button .btn:hover .icon {
   color: #9356dc;
 }
-main .functioning-container__button .btn .fa-1,
-main .functioning-container__button .btn .fa-2,
-main .functioning-container__button .btn .fa-3 {
+main .functioning-container__button .btn .purple-pellet {
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -127,13 +125,11 @@ main .functioning-container__button .btn .fa-3 {
   justify-content: center;
   align-items: center;
   position: relative;
-  right: 30px;
+  right: 60px;
   color: #fff;
   background-color: #9356dc;
 }
-main .functioning-container__button .btn .fa-mobile-screen-button,
-main .functioning-container__button .btn .fa-list-ul,
-main .functioning-container__button .btn .fa-store {
+main .functioning-container__button .btn .icon {
   padding-right: 25px;
 }
 main .functioning-container__button .btn span {
@@ -141,5 +137,113 @@ main .functioning-container__button .btn span {
   font-weight: 600;
 }
 main .card-container {
-  margin: 0 15px;
+  height: 100%;
+  background-color: #f6f6f6;
+  margin-top: 50px;
+  padding: 45px 15px;
+}
+main .card-container h2 {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+main .card-container__item {
+  height: 300px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
+  margin: 20px 0;
+}
+main .card-container__item:hover {
+  border: 0;
+  box-shadow: 3px 3px 5px #ff79da, -3px -3px #9356dc;
+}
+main .card-container .card-link:hover {
+  color: #6a23bb;
+}
+main .card-container .card-link .image {
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+main .card-container .card-link .image img {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .card-container .card-link .card-btm {
+  display: flex;
+  justify-content: space-between;
+}
+main .card-container .card-link .card-btm__text {
+  padding-left: 15px;
+}
+main .card-container .card-link .card-btm__text h3 {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
+}
+main .card-container .card-link .card-btm__text span {
+  line-height: 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+main .card-container .card-link .card-btm__icon {
+  margin: 30px 25px;
+}
+main .card-container .card-link .card-btm__icon .heart:hover {
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+main .card-container .card-link .new {
+  width: 110px;
+  height: 50px;
+  color: green;
+  background-color: #99e2d0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 280px;
+  left: 260px;
+}
+
+footer {
+  width: 100%;
+  height: 220px;
+  background: #393838;
+  padding-top: 40px;
+}
+footer h3 {
+  margin: 0;
+  padding-left: 36px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+footer ul {
+  margin: 0;
+}
+footer ul li {
+  margin-top: 15px;
+}
+footer ul li a {
+  color: #fff;
+  font-size: 1.3rem;
+}
+footer ul li a:hover {
+  color: #99e2d0;
+}
+footer ul li .icon1 {
+  padding-right: 15px;
+}
+footer ul li .icon2 {
+  padding-right: 4px;
 }/*# sourceMappingURL=index.css.map */
