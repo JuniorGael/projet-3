@@ -1,33 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  width: 100%;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Shrikhand", cursive;
-}
-
-span,
-p {
-  font-family: "Roboto", sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
 header {
   height: 80px;
   box-shadow: -2px 4px 10px #e5e4e4;
@@ -246,4 +216,34 @@ footer ul li .icon1 {
 }
 footer ul li .icon2 {
   padding-right: 4px;
-}/*# sourceMappingURL=index.css.map */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Shrikhand", cursive;
+}
+
+span,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}/*# sourceMappingURL=main.css.map */

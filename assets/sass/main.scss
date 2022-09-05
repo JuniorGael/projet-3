@@ -1,14 +1,9 @@
-$font1: 'Shrikhand', cursive;
-$font2: 'Roboto', sans-serif;
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$tertiary-color: #99e2d0;
+@import './outils/variables';
+@import './outils/mixin';
+@import './layouts/header';
+@import './layouts/main';
+@import './layouts/footer';
 
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 body {
     margin: 0;
