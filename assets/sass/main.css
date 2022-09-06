@@ -1,10 +1,21 @@
 .header {
-  height: 60px;
+  margin: 0 auto;
+  height: 50px;
   box-shadow: -2px 4px 10px #e5e4e4;
+  position: relative;
 }
 .header__logo {
   font-size: 2.5rem;
   text-align: center;
+  margin: 0;
+}
+.header__arrow {
+  box-shadow: none;
+}
+.header__arrow__link {
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
 
 .main {
@@ -31,8 +42,8 @@
   width: 80%;
   margin: 0 auto;
 }
-.main .reservation__header {
-  font-size: 1.5rem;
+.main .reservation__heading {
+  font-size: 1.6rem;
   line-height: 30px;
   letter-spacing: 0.05rem;
 }
@@ -57,18 +68,17 @@
 .main .functioning {
   margin: 0 15px;
 }
-.main .functioning__header {
+.main .functioning__heading {
   font-size: 1.4rem;
   letter-spacing: 0.05rem;
   text-transform: capitalize;
   margin: 0;
 }
 .main .functioning__container {
-  width: 100%;
   margin: 15px auto 30px;
 }
 .main .functioning__container__btn {
-  width: 350px;
+  width: 330px;
   height: 80px;
   border-radius: 30px;
   border: transparent;
@@ -94,7 +104,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  right: 60px;
+  right: 45px;
   color: #fff;
   background-color: #9356dc;
 }
@@ -111,9 +121,10 @@
   margin-top: 50px;
   padding: 45px 15px;
 }
-.main .card__header {
+.main .card__heading {
   font-size: 1.6rem;
   text-transform: capitalize;
+  letter-spacing: 0.05rem;
 }
 .main .card__item {
   height: 300px;
@@ -126,6 +137,9 @@
   border: 0;
   box-shadow: 3px 3px 5px #ff79da, -3px -3px #9356dc;
 }
+.main .card__item__link {
+  position: relative;
+}
 .main .card__item__link:hover {
   color: #6a23bb;
 }
@@ -133,7 +147,7 @@
   border-radius: 20px 20px 0 0;
   overflow: hidden;
 }
-.main .card__item__link__image img {
+.main .card__item__link__image__img {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -178,18 +192,90 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.main__menu {
+  background-color: #f6f6f6;
+  border-radius: 50px 50px 0 0;
+  padding: 30px 15px;
   position: relative;
-  bottom: 280px;
-  left: 270px;
+  bottom: 70px;
+}
+.main__menu__header {
+  display: flex;
+  justify-content: space-between;
+}
+.main__menu__header .heading {
+  margin-bottom: 0;
+  font-size: 1.75rem;
+}
+.main__menu__header .heart {
+  padding: 25px;
+}
+.main__menu__items {
+  margin: 25px auto;
+}
+.main__menu__items .text {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.main__menu__items .underline {
+  border-bottom: 3.5px solid #99e2d0;
+  padding-bottom: 4px;
+  margin-right: 310px;
+}
+.main__menu__items__btn {
+  width: 100%;
+  height: 85px;
+  background-color: #fff;
+  margin: 25px auto;
+  border-radius: 20px;
+  box-shadow: -3px 4px 10px #e5e4e4, 3px 4px 10px #e5e4e4;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.main__menu__items__btn__inner {
+  padding: 15px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main__menu__items__btn__inner .heading {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 40px;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main__menu__items__btn__inner .subheading {
+  font-size: 1.2rem;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main__menu__items__btn .price {
+  font-size: 1.2rem;
+  padding-top: 52px;
+  padding-right: 25px;
+  white-space: nowrap;
+}
+.main__menu__items__btn .check {
+  display: none;
 }
 
-footer {
-  width: 100%;
+.footer {
   height: 220px;
   background: #393838;
   padding-top: 40px;
 }
-footer h3 {
+.footer__heading {
   margin: 0;
   padding-left: 36px;
   color: #fff;
@@ -197,23 +283,23 @@ footer h3 {
   font-weight: 300;
   letter-spacing: 0.05rem;
 }
-footer ul {
+.footer__inner {
   margin: 0;
 }
-footer ul li {
+.footer__inner__list {
   margin-top: 15px;
 }
-footer ul li a {
+.footer__inner__list__link {
   color: #fff;
   font-size: 1.3rem;
 }
-footer ul li a:hover {
+.footer__inner__list__link:hover {
   color: #99e2d0;
 }
-footer ul li .icon1 {
+.footer__inner__list .icon1 {
   padding-right: 15px;
 }
-footer ul li .icon2 {
+.footer__inner__list .icon2 {
   padding-right: 4px;
 }
 

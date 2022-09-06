@@ -23,8 +23,8 @@
         width: 80%;
         margin: 0 auto;
 
-        &__header {
-            font-size: 1.5rem;
+        &__heading {
+            font-size: 1.6rem;
             line-height: 30px;
             letter-spacing: 0.05rem;
         }
@@ -44,7 +44,7 @@
             margin: 20px auto 50px;
             background: linear-gradient(to top, $primary-color, $secondary-color);
             border: transparent;
-            color: #fff;
+            color: $white-color;
             font-size: 1.2rem;
             cursor: pointer;
         }
@@ -53,7 +53,7 @@
     .functioning {
         margin: 0 15px;
 
-        &__header {
+        &__heading {
             font-size: 1.4rem;
             letter-spacing: 0.05rem;
             text-transform: capitalize;
@@ -61,11 +61,10 @@
         }
 
         &__container {
-            width: 100%;
             margin: 15px auto 30px;
 
             &__btn {
-                width: 350px;
+                width: 330px;
                 height: 80px;
                 border-radius: 30px;
                 border: transparent;
@@ -89,8 +88,8 @@
                     border-radius: 50px;
                     @include center;
                     position: relative;
-                    right: 60px;
-                    color: #fff;
+                    right: 45px;
+                    color: $white-color;
                     background-color: $primary-color;
                 }
                 
@@ -112,14 +111,15 @@
         margin-top: 50px;
         padding: 45px 15px;
 
-        &__header {
+        &__heading {
             font-size: 1.6rem;
             text-transform: capitalize;
+            letter-spacing: 0.05rem;
         }
 
         &__item {
             height: 300px;
-            background-color: #fff;
+            background-color: $white-color;
             border-radius: 20px;
             box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
             margin: 20px 0;
@@ -130,6 +130,7 @@
             }
 
             &__link {
+                position: relative;
                 &:hover {
                     color: #6a23bb;
                 }
@@ -138,7 +139,7 @@
                     border-radius: 20px 20px 0 0;
                     overflow: hidden;
 
-                    img {
+                    &__img {
                         height: 200px;
                         object-fit: cover;
                     }
@@ -187,9 +188,96 @@
                     font-weight: 600;
                     text-transform: capitalize;
                     @include center;
-                    position: relative;
-                    bottom: 280px;
-                    left: 270px;
+                    position: absolute;
+                    top: 20px;
+                    right: 30px;
+                }
+            }
+        }
+    }
+
+    // =========== La palette du gout ==============
+
+    
+
+    &__menu {
+        background-color: #f6f6f6;
+        border-radius: 50px 50px 0 0;
+        padding: 30px 15px;
+        position: relative;
+        bottom: 70px;
+        
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+
+            .heading {
+                margin-bottom: 0;
+                font-size: 1.75rem;
+            }
+            .heart {
+                padding: 25px;
+            }
+        }
+
+        &__items {
+            margin: 25px auto;
+
+            .text {
+                font-size: 1.3rem;
+                text-transform: uppercase;
+            }
+            .underline {
+                border-bottom: 3.5px solid $tertiary-color;
+                padding-bottom: 4px;
+                margin-right: 310px;
+            }
+
+            &__btn {
+                width: 100%;
+                height: 85px;
+                background-color: $white-color;
+                margin: 25px auto;
+                border-radius: 20px;
+                box-shadow: -3px 4px 10px #e5e4e4, 3px 4px 10px #e5e4e4;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+
+                &__inner {
+                    padding: 15px 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    .heading {
+                        margin: 0;
+                        font-size: 1.3rem;
+                        line-height: 40px;
+                        letter-spacing: 0.05rem;
+                        font-weight: 500;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .subheading {
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .price {
+                    font-size: 1.2rem;
+                    padding-top: 52px;
+                    padding-right: 25px;
+                    white-space: nowrap;
+                }
+
+                .check {
+                    display: none;
                 }
             }
         }
