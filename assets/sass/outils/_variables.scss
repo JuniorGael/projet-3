@@ -5,3 +5,9 @@ $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $black-color: #000;
 $white-color: #fff;
+$breakpoints: (
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px,
+);

@@ -1,10 +1,7 @@
 .main {
-    width: 100%;
-    height: 100%;
 
     &__location {
-        height: 45px;
-        background: #f8f6f6;
+        background: #e3e1e1;
         margin-top: 6px;
         
         .location {
@@ -20,17 +17,18 @@
 
     .reservation {
         text-align: center;
-        width: 80%;
+        // width: 80%;
+        padding: 0 20px;
         margin: 0 auto;
 
         &__heading {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             line-height: 30px;
             letter-spacing: 0.05rem;
         }
 
         &__text {
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 20px;
             letter-spacing: 0.05rem;
             margin-top: 0;
@@ -51,7 +49,10 @@
     }
 
     .functioning {
-        margin: 0 15px;
+        // width: 100%;
+        // height: 100%;
+        padding: 40px 15px;
+        background-color: $white-color;
 
         &__heading {
             font-size: 1.4rem;
@@ -64,7 +65,6 @@
             margin: 15px auto 30px;
 
             &__btn {
-                width: 330px;
                 height: 80px;
                 border-radius: 30px;
                 border: transparent;
@@ -72,7 +72,7 @@
                 font-size: 1.2rem;
                 cursor: pointer;
                 @include center;
-                margin: 0 auto;
+                margin: 25px auto;
 
                 &:hover {
                     background-color: #f7f0ff;
@@ -88,13 +88,13 @@
                     border-radius: 50px;
                     @include center;
                     position: relative;
-                    right: 45px;
+                    right: 20px;
                     color: $white-color;
                     background-color: $primary-color;
                 }
                 
                 .icon {
-                    padding-right: 25px;
+                    padding-right: 16px;
                 }
 
                 .text {
@@ -102,11 +102,17 @@
                     font-weight: 600;
                 }
             }
+
+            @include md {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+            }
         }
     }
 
     .card {
-        height: 100%;
+        // height: 100%;
         background-color: #f6f6f6;
         margin-top: 50px;
         padding: 45px 15px;
@@ -118,8 +124,6 @@
         }
 
         &__item {
-            // width: 100%;
-            height: 300px;
             background-color: $white-color;
             border-radius: 20px;
             box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
@@ -131,8 +135,7 @@
             }
 
             &__link {
-                // width: 100%;
-                height: 100%;
+                // height: 100%;
                 position: relative;
                 &:hover {
                     color: #6a23bb;
@@ -156,8 +159,9 @@
                         padding-left: 15px;
 
                         .heading {
-                            margin-bottom: 0;
-                            font-size: 1.3rem;
+                            margin: 0;
+                            padding-top: 10px;
+                            font-size: 1.2rem;
                             letter-spacing: 0.05rem;
                         }
 
@@ -169,7 +173,7 @@
                     }
 
                     &__icon {
-                        margin: 30px 25px;
+                        margin: 25px 20px 0;
 
                         .heart:hover {
                             background: linear-gradient(to top, $primary-color, $secondary-color);
@@ -183,8 +187,9 @@
                 }
 
                 &__new {
-                    width: 110px;
-                    height: 50px;
+                    // width: 110px;
+                    // height: 50px;
+                    padding: 15px 10px;
                     color: green;
                     background-color: $tertiary-color;
                     font-size: 1.3rem;
@@ -202,7 +207,10 @@
     // =========== PAGES ==============
 
     &__image {
-        height: 100%;
+        &__img {
+            height: 250px;
+            object-fit: cover;
+        }
     }
 
     &__menu {
@@ -219,10 +227,10 @@
 
             .heading {
                 margin-bottom: 0;
-                font-size: 1.75rem;
+                font-size: 1.5rem;
             }
             .heart {
-                padding: 25px;
+                padding: 15px 8px;
             }
         }
 
@@ -236,12 +244,10 @@
             .underline {
                 border-bottom: 3.5px solid $tertiary-color;
                 padding-bottom: 4px;
-                // margin-right: 305px;
-                margin-right: 19rem;
             }
 
             &__btn {
-                width: 100%;
+                // width: 100%;
                 height: 85px;
                 background-color: $white-color;
                 margin: 25px auto;
@@ -250,16 +256,53 @@
                 display: flex;
                 justify-content: space-between;
                 cursor: pointer;
-                animation: menu-scroll 600ms ease-in-out forwards;
+                animation-name: menu-load;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                @for $i from 1 through 10 {
+                    &:nth-child(#{$i}n) {
+                        animation-delay: #{$i * 0.5}s;
+                    }
+                }
+                opacity: 0;
+                overflow-x: hidden;
+
+                @keyframes menu-load {
+                    0% {
+                        transform: translateY(-20px);
+                        opacity: 0;
+                    }
+
+                    100% {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+
+                &:hover .check {
+                    animation: slideIn 0.5s ease-in forwards;
+
+                    @keyframes slideIn {
+                        100% {
+                            margin-right: 0;
+                        }
+                
+                        0% {
+                            margin-right: -80px;
+                        }
+                    }
+                }
+
 
                 &__inner {
                     padding: 15px 10px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+
                     .heading {
                         margin: 0;
-                        font-size: 1.3rem;
+                        font-size: 1rem;
                         line-height: 40px;
                         letter-spacing: 0.05rem;
                         font-weight: 500;
@@ -267,38 +310,26 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
+
                     .subheading {
-                        font-size: 1.2rem;
+                        font-size: 0.9rem;
                         font-weight: 400;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
                     }
                 }
 
                 .price {
-                    font-size: 1.2rem;
-                    padding-top: 52px;
-                    padding-right: 25px;
+                    font-size: 1rem;
+                    padding-top: 55px;
+                    padding-right: 35px;
                     white-space: nowrap;
                 }
 
                 .check {
-                    display: none;
-                }
-
-                @keyframes menu-scroll {
-                    0% {
-                        transform: translateY(-100px);
-                    }
-
-                    50% {
-                        transform: translateY(-30px);
-                    }
-
-                    100% {
-                        transform: translateY(0);
-                    }
+                    padding: 25px 15px;
+                    background-color: $tertiary-color;
+                    border-radius: 0 20px 20px 0;
+                    color: $white-color;
+                    margin-right: -80px;
                 }
             }
         }
