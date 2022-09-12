@@ -4,13 +4,21 @@
 @import './layouts/main';
 @import './layouts/footer';
 
-
-body {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
+}
+
+body {
     box-sizing: border-box;
-    background-color: #f6f6f6;
+}
+
+.page-container {
     min-width: 320px;
+    background-color: #f6f6f6;
 }
 
 img {

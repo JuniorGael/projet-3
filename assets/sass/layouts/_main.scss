@@ -1,204 +1,204 @@
 .main {
-
-    &__location {
+    letter-spacing: 0.05rem;
+    .location {
+        height: 45px;
         background: #e3e1e1;
-        margin-top: 6px;
+        margin-top: 5px;
+        @include center;
         
-        .location {
-            @include center;
+        &__avenue {
             font-size: 1.1rem;
-            padding: 8px;
 
-            .fa-location-dot {
-                padding-right: 15px;
+            &__icon {
+                padding-right: 10px;
             }
         }
     }
 
     .reservation {
         text-align: center;
-        // width: 80%;
+        margin: 40px auto;
         padding: 0 20px;
-        margin: 0 auto;
-
-        &__heading {
-            font-size: 1.4rem;
-            line-height: 30px;
-            letter-spacing: 0.05rem;
-        }
 
         &__text {
-            font-size: 0.9rem;
-            line-height: 20px;
-            letter-spacing: 0.05rem;
-            margin-top: 0;
-            font-weight: 600;
+
+            .heading {
+                font-size: 1.6rem;
+                font-weight: 900;
+            }
+            .subheading {
+                margin-top: 15px;
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
         }
 
         &__btn {
-            width: 250px;
-            height: 60px;
-            border-radius: 50px;
-            margin: 20px auto 50px;
-            background: linear-gradient(to top, $primary-color, $secondary-color);
-            border: transparent;
-            color: $white-color;
-            font-size: 1.2rem;
-            cursor: pointer;
+            margin: 20px auto;
+
+            .btn {
+                width: 200px;
+                height: 45px;
+                border-radius: 50px;
+                border: transparent;
+                box-shadow: -2px 4px 10px #e5e4e4, 2px 4px 10px #e5e4e4;
+                background: linear-gradient(to top, $primary-color, $secondary-color);
+                color: $white-color;
+                font-size: 0.9rem;
+                font-weight: 600;
+                cursor: pointer;
+            }
         }
     }
 
     .functioning {
-        // width: 100%;
-        // height: 100%;
-        padding: 40px 15px;
         background-color: $white-color;
+        padding: 40px 10px;
 
-        &__heading {
-            font-size: 1.4rem;
-            letter-spacing: 0.05rem;
+        .heading {
+            font-size: 1.6rem;
+            font-weight: 900;
             text-transform: capitalize;
             margin: 0;
         }
 
-        &__container {
-            margin: 15px auto 30px;
+        &__btn {
+            margin: 20px;
 
-            &__btn {
-                height: 80px;
-                border-radius: 30px;
+            .btn {
+                width: 270px;
+                height: 75px;
                 border: transparent;
-                box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
+                border-radius: 20px;
+                box-shadow: -2px 4px 10px #e5e4e4, 2px 4px 10px #e5e4e4;
                 font-size: 1.2rem;
                 cursor: pointer;
-                @include center;
-                margin: 25px auto;
+                margin: 20px auto;
+                position: relative;
 
                 &:hover {
                     background-color: #f7f0ff;
-                    
+
                     & .icon {
                         color: $primary-color;
-                    } 
+                    }
                 }
 
                 .purple-pellet {
-                    width: 40px;
-                    height: 40px;
+                    width: 25px;
+                    height: 25px;
                     border-radius: 50px;
+                    background: $primary-color;
                     @include center;
-                    position: relative;
-                    right: 20px;
                     color: $white-color;
-                    background-color: $primary-color;
+                    position: absolute;
+                    left: -15px;
                 }
-                
+
                 .icon {
-                    padding-right: 16px;
+                    font-size: 1.4rem;
+                    color: #8d8c8c;
                 }
 
                 .text {
                     font-size: 1.1rem;
-                    font-weight: 600;
+                    font-weight: 500;
+                    padding-left: 10px;
                 }
-            }
-
-            @include md {
-                display: flex;
-                flex-direction: row;
-                margin: 0;
             }
         }
     }
 
     .card {
-        // height: 100%;
         background-color: #f6f6f6;
         margin-top: 50px;
         padding: 45px 15px;
 
-        &__heading {
+        .heading {
             font-size: 1.6rem;
+            font-weight: bolder;
             text-transform: capitalize;
-            letter-spacing: 0.05rem;
         }
 
-        &__item {
-            background-color: $white-color;
-            border-radius: 20px;
-            box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
-            margin: 20px 0;
+        &__container {
+            margin-top: 20px;
 
-            &:hover {
-            border: 0;
-            box-shadow: 3px 3px 5px $secondary-color, -3px -3px $primary-color;
-            }
-
-            &__link {
-                // height: 100%;
-                position: relative;
+            .item {
+                background-color: $white-color;
+                border-radius: 20px;
+                box-shadow: -3px 6px 8px #e5e4e4, 3px 6px 8px #e5e4e4;
+                margin: 25px auto;
+        
                 &:hover {
-                    color: #6a23bb;
+                    border: 0;
+                    box-shadow: 3px 3px 5px $secondary-color, -3px -3px $primary-color;
                 }
-
-                &__image {
-                    border-radius: 20px 20px 0 0;
-                    overflow: hidden;
-
-                    &__img {
-                        height: 200px;
-                        object-fit: cover;
+        
+                .link {
+                    position: relative;
+        
+                    &:hover {
+                        color: #6a23bb;
                     }
-                }
-
-                &__btm {
-                    display: flex;
-                    justify-content: space-between;
-
-                    &__menu {
-                        padding-left: 15px;
-
-                        .heading {
-                            margin: 0;
-                            padding-top: 10px;
-                            font-size: 1.2rem;
-                            letter-spacing: 0.05rem;
-                        }
-
-                        .text {
-                            line-height: 40px;
-                            font-size: 1.1rem;
-                            font-weight: 600;
+        
+                    &__image {
+                        border-radius: 20px 20px 0 0;
+                        overflow: hidden;
+        
+                        &__img {
+                            height: 200px;
+                            object-fit: cover;
                         }
                     }
-
-                    &__icon {
-                        margin: 25px 20px 0;
-
-                        .heart:hover {
-                            background: linear-gradient(to top, $primary-color, $secondary-color);
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            color: transparent;
-                            font-weight: 900;
-                            cursor: grabbing;
+        
+                    &__btm {
+                        display: flex;
+                        justify-content: space-between;
+        
+                        &__text {
+                            padding-left: 15px;
+        
+                            .heading {
+                                margin: 0;
+                                padding-top: 10px;
+                                font-size: 1.2rem;
+                                letter-spacing: 0.05rem;
+                                font-weight: 900;
+                            }
+        
+                            .subheading {
+                                line-height: 40px;
+                                font-size: 1.1rem;
+                                font-weight: 300;
+                            }
+                        }
+        
+                        &__icon {
+                            margin: 25px 20px 0;
+        
+                            .heart:hover {
+                                background: linear-gradient(to top, $primary-color, $secondary-color);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                color: transparent;
+                                font-weight: 900;
+                                cursor: grabbing;
+                            }
                         }
                     }
-                }
-
-                &__new {
-                    // width: 110px;
-                    // height: 50px;
-                    padding: 15px 10px;
-                    color: green;
-                    background-color: $tertiary-color;
-                    font-size: 1.3rem;
-                    font-weight: 600;
-                    text-transform: capitalize;
-                    @include center;
-                    position: absolute;
-                    top: 15px;
-                    right: 20px;
+        
+                    &__new {
+                        padding: 15px 10px;
+                        color: green;
+                        background-color: $tertiary-color;
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        @include center;
+                        position: absolute;
+                        top: 15px;
+                        right: 20px;
+                    }
                 }
             }
         }
@@ -208,7 +208,7 @@
 
     &__image {
         &__img {
-            height: 250px;
+            // height: 250px;
             object-fit: cover;
         }
     }
