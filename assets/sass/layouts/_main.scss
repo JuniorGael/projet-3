@@ -172,6 +172,10 @@
         
                         &__icon {
                             margin: 8px 15px 0;
+                            
+                            &:hover .heart {
+                                animation: bg-heart 2s ease-in-out forwards;
+                            }
         
                             .heart:hover {
                                 background: linear-gradient(to top, $primary-color, $secondary-color);
@@ -180,6 +184,16 @@
                                 color: transparent;
                                 font-weight: 900;
                                 cursor: pointer;
+
+                                @keyframes bg-heart {
+                                    0% {
+                                        opacity: 0;
+                                    }
+
+                                    100% {
+                                        opacity: 1;
+                                    }
+                                }
                             }
                         }
                     }

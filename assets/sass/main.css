@@ -165,6 +165,10 @@
 .main .card__container .item .link__btm__icon {
   margin: 8px 15px 0;
 }
+.main .card__container .item .link__btm__icon:hover .heart {
+  -webkit-animation: bg-heart 2s ease-in-out forwards;
+          animation: bg-heart 2s ease-in-out forwards;
+}
 .main .card__container .item .link__btm__icon .heart:hover {
   background: linear-gradient(to top, #9356dc, #ff79da);
   background-clip: text;
@@ -172,6 +176,22 @@
   color: transparent;
   font-weight: 900;
   cursor: pointer;
+}
+@-webkit-keyframes bg-heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bg-heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .main .card__container .item .link__new {
   padding: 15px 10px;
