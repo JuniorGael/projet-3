@@ -48,7 +48,7 @@
   font-weight: 500;
 }
 .main .reservation__btn {
-  margin: 20px auto;
+  margin-top: 20px;
 }
 .main .reservation__btn .btn {
   width: 200px;
@@ -70,10 +70,9 @@
   font-size: 1.6rem;
   font-weight: 900;
   text-transform: capitalize;
-  margin: 0;
 }
 .main .functioning__btn {
-  margin: 20px;
+  margin: 0 18px;
 }
 .main .functioning__btn .btn {
   width: 270px;
@@ -115,16 +114,12 @@
 }
 .main .card {
   background-color: #f6f6f6;
-  margin-top: 50px;
   padding: 45px 15px;
 }
 .main .card .heading {
   font-size: 1.6rem;
-  font-weight: bolder;
+  font-weight: 900;
   text-transform: capitalize;
-}
-.main .card__container {
-  margin-top: 20px;
 }
 .main .card__container .item {
   background-color: #fff;
@@ -133,7 +128,6 @@
   margin: 25px auto;
 }
 .main .card__container .item:hover {
-  border: 0;
   box-shadow: 3px 3px 5px #ff79da, -3px -3px #9356dc;
 }
 .main .card__container .item .link {
@@ -159,19 +153,17 @@
   padding-left: 15px;
 }
 .main .card__container .item .link__btm__text .heading {
-  margin: 0;
-  padding-top: 10px;
   font-size: 1.2rem;
   letter-spacing: 0.05rem;
   font-weight: 900;
 }
 .main .card__container .item .link__btm__text .subheading {
-  line-height: 40px;
+  line-height: 30px;
   font-size: 1.1rem;
   font-weight: 300;
 }
 .main .card__container .item .link__btm__icon {
-  margin: 25px 20px 0;
+  margin: 8px 15px 0;
 }
 .main .card__container .item .link__btm__icon .heart:hover {
   background: linear-gradient(to top, #9356dc, #ff79da);
@@ -179,8 +171,7 @@
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 900;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
+  cursor: pointer;
 }
 .main .card__container .item .link__new {
   padding: 15px 10px;
@@ -196,40 +187,38 @@
   top: 15px;
   right: 20px;
 }
-.main__image__img {
+.main .image__img {
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main__menu {
+.main .menu {
   background-color: #f6f6f6;
   border-radius: 50px 50px 0 0;
   padding: 30px 15px;
   position: relative;
   bottom: 50px;
 }
-.main__menu__header {
+.main .menu__header {
   display: flex;
   justify-content: space-between;
 }
-.main__menu__header .heading {
-  margin-bottom: 0;
-  font-size: 1.5rem;
+.main .menu__header .heading {
+  font-size: 1.4rem;
 }
-.main__menu__header .heart {
-  padding: 15px 8px;
-}
-.main__menu__items {
+.main .menu__items {
   margin: 25px auto;
 }
-.main__menu__items .text {
+.main .menu__items .text {
   font-size: 1.3rem;
   text-transform: uppercase;
 }
-.main__menu__items .underline {
+.main .menu__items .text .underline {
   border-bottom: 3.5px solid #99e2d0;
   padding-bottom: 4px;
 }
-.main__menu__items__btn {
+.main .menu__items__container .btn {
+  max-width: 300px;
   height: 85px;
   background-color: #fff;
   margin: 25px auto;
@@ -245,45 +234,45 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
-.main__menu__items__btn:nth-child(1n) {
+.main .menu__items__container .btn:nth-child(1n) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
-.main__menu__items__btn:nth-child(2n) {
+.main .menu__items__container .btn:nth-child(2n) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
-.main__menu__items__btn:nth-child(3n) {
+.main .menu__items__container .btn:nth-child(3n) {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
-.main__menu__items__btn:nth-child(4n) {
+.main .menu__items__container .btn:nth-child(4n) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-.main__menu__items__btn:nth-child(5n) {
+.main .menu__items__container .btn:nth-child(5n) {
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
-.main__menu__items__btn:nth-child(6n) {
+.main .menu__items__container .btn:nth-child(6n) {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
-.main__menu__items__btn:nth-child(7n) {
+.main .menu__items__container .btn:nth-child(7n) {
   -webkit-animation-delay: 3.5s;
           animation-delay: 3.5s;
 }
-.main__menu__items__btn:nth-child(8n) {
+.main .menu__items__container .btn:nth-child(8n) {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
-.main__menu__items__btn:nth-child(9n) {
+.main .menu__items__container .btn:nth-child(9n) {
   -webkit-animation-delay: 4.5s;
           animation-delay: 4.5s;
 }
-.main__menu__items__btn:nth-child(10n) {
+.main .menu__items__container .btn:nth-child(10n) {
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
 }
@@ -307,7 +296,7 @@
     opacity: 1;
   }
 }
-.main__menu__items__btn:hover .check {
+.main .menu__items__container .btn:hover .check {
   -webkit-animation: slideIn 0.5s ease-in forwards;
           animation: slideIn 0.5s ease-in forwards;
 }
@@ -327,33 +316,33 @@
     margin-right: -80px;
   }
 }
-.main__menu__items__btn__inner {
+.main .menu__items__container .btn__inner {
+  width: 210px;
   padding: 15px 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main__menu__items__btn__inner .heading {
-  margin: 0;
-  font-size: 1rem;
+.main .menu__items__container .btn__inner .heading {
+  font-size: 1.1rem;
   line-height: 40px;
   letter-spacing: 0.05rem;
-  font-weight: 500;
+  font-weight: 900;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main__menu__items__btn__inner .subheading {
+.main .menu__items__container .btn__inner .subheading {
   font-size: 0.9rem;
   font-weight: 400;
 }
-.main__menu__items__btn .price {
+.main .menu__items__container .btn .price {
+  width: 50px;
   font-size: 1rem;
   padding-top: 55px;
-  padding-right: 35px;
   white-space: nowrap;
 }
-.main__menu__items__btn .check {
+.main .menu__items__container .btn .check {
   padding: 25px 15px;
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
