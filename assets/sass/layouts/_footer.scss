@@ -30,9 +30,14 @@
                 padding-right: 4px;
             }
         }
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
-    @media all and (min-width: 321px) and (max-width: 768px) {
-        padding-left: 35px;
+    @media screen and (min-width: 992px) {
+        padding: 40px;
     }
 }
