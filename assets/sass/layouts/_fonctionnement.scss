@@ -1,0 +1,77 @@
+
+.functioning {
+    background-color: $white-color;
+    padding: 40px 10px;
+
+    .heading {
+        text-transform: capitalize;
+
+        // @include desktop-only {
+        //     margin: 20px;
+        // }
+    }
+
+    &__btn {
+        margin: 0 18px;
+
+        @function light-pink($color) {
+            $hue: hue($color);
+            $sat: 100%;
+            $light: 95%;
+            $light-pink: hsl($hue, $sat, $light);
+
+            @return $light-pink;
+        }
+
+        .btn {
+            width: 100%;
+            height: 75px;
+            border: transparent;
+            border-radius: 20px;
+            box-shadow: -2px 4px 10px #e5e4e4, 2px 4px 10px #e5e4e4;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 20px;
+            position: relative;
+
+            @include desktop-only {
+                margin: 20px;
+            }
+
+            &:hover {
+                background-color: light-pink($primary-color);
+
+                & .icon {
+                    color: $primary-color;
+                }
+            }
+
+            .purple-pellet {
+                width: 25px;
+                height: 25px;
+                border-radius: 50px;
+                background: $primary-color;
+                @include center;
+                color: $white-color;
+                position: absolute;
+                left: -15px;
+            }
+
+            .icon {
+                font-size: 1.4rem;
+                color: #8d8c8c;
+            }
+
+            .text {
+                font-size: 1.1rem;
+                font-weight: 900;
+                padding-left: 10px;
+            }
+        }
+
+        @include desktop-only {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

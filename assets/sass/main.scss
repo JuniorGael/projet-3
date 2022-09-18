@@ -1,46 +1,15 @@
 @import './outils/variables';
 @import './outils/mixin';
+@import './base/base';
+@import './base/typography';
+@import './components/loader';
 @import './layouts/header';
 @import './layouts/main';
+@import './layouts/location';
+@import './layouts/reservation';
+@import './layouts/fonctionnement';
+@import './layouts/card';
 @import './layouts/footer';
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
 
-body {
-    box-sizing: border-box;
-}
 
-.page-container {
-    min-width: 320px;
-    background-color: #f6f6f6;
-}
-
-img {
-    width: 100%;
-}
-
-h1,
-h2,
-h3 {
-    font-family: $font1;
-}
-
-span,
-p {
-    font-family: $font2;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: $black-color;
-}

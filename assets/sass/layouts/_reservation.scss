@@ -1,0 +1,57 @@
+
+.reservation {
+    text-align: center;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    &__text {
+
+        .subheading {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            @include tablet-only {
+                font-size: 1.3rem;
+            }
+
+            @include desktop-only {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+
+        .btn {
+            width: 200px;
+            height: 50px;
+            border-radius: 50px;
+            border: transparent;
+            box-shadow: -2px 4px 10px #e5e4e4, 2px 4px 10px #e5e4e4;
+            background: linear-gradient(to top, $primary-color, $secondary-color);
+            color: $white-color;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05);
+                opacity: 0.9;
+                box-shadow: -1px 3px 26px 5px rgba(0, 0, 0, 0.4);
+            }
+
+            @include tablet-only {
+                width: 270px;
+                font-size: 1.2rem;
+            }
+
+            @include desktop-only {
+                width: 270px;
+                font-size: 1.2rem;
+            }
+
+        }
+    }
+}
