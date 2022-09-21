@@ -5,6 +5,10 @@
 
     .heading {
         text-transform: capitalize;
+
+        @include desktop-only {
+            padding-left: 5px;
+        }
     }
 
     &__btn {

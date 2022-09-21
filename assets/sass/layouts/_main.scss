@@ -31,6 +31,7 @@
 
                 @include desktop-only {
                     font-size: 2rem;
+                    padding: 8px;
                 }
             }
 
@@ -60,185 +61,203 @@
             }
         }
 
-        &__items {
-            margin: 25px auto;
+        .menuWrapper {
 
-            .text {
-                font-size: 1.3rem;
-                text-transform: uppercase;
+            &__items {
+                margin: 25px auto;
 
-                .underline {
-                    border-bottom: 3.5px solid $tertiary-color;
-                    padding-bottom: 4px;
+                .text {
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+
+                    .underline {
+                        border-bottom: 3.5px solid $tertiary-color;
+                        padding-bottom: 4px;
+                    }
                 }
-            }
 
-            &__container {
+                &__container {
 
-                .btn {
-                    max-width: 100%;
-                    height: 85px;
-                    background-color: $white-color;
-                    margin: 25px auto;
-                    border-radius: 20px;
-                    box-shadow: -3px 4px 10px #e5e4e4, 3px 4px 10px #e5e4e4;
-                    display: flex;
-                    justify-content: space-between;
-                    cursor: pointer;
-                    animation-name: menu-load;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-            
-                    opacity: 0;
-                    overflow: hidden;
-            
-                    @keyframes menu-load {
-                        0% {
-                            transform: translateY(-20px);
-                            opacity: 0;
-                        }
-            
-                        100% {
-                            transform: translateY(0);
-                            opacity: 1;
-                        }
-                    }
-
-                    &:hover {
-                        .icon {
-                            animation: slideIn 0.5s ease-in forwards;
-                            
-                            @keyframes slideIn {
-                                100% {
-                                    margin-right: 0;
-                                }
-                    
-                                0% {
-                                    margin-right: -100px;
-                                }
-                            }
-                        }
-                        .check {
-                            animation: rotate 0.75s ease-in forwards;
-                            @keyframes rotate {
-                                100% {
-                                    transform: rotate(0deg);
-                                }
-                        
-                                0% {
-                                    transform: rotate(360deg);
-                                }
-                            }
-                        }
-                    }
-            
-                    &__inner {
-                        width: 70%;
-                        padding: 15px 10px;
-                        white-space: nowrap;
+                    .btn {
+                        width: 100%;
+                        height: 85px;
+                        background-color: $white-color;
+                        margin: 25px auto;
+                        border-radius: 20px;
+                        box-shadow: -3px 4px 10px #e5e4e4, 3px 4px 10px #e5e4e4;
+                        display: flex;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        animation-name: menu-load;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+                
+                        opacity: 0;
                         overflow: hidden;
-                        text-overflow: ellipsis;
-            
-                        .heading {
-                            font-size: 1.1rem;
-                            line-height: 40px;
-                            letter-spacing: 0.05rem;
-                            font-weight: 900;
+                
+                        @keyframes menu-load {
+                            0% {
+                                transform: translateY(-20px);
+                                opacity: 0;
+                            }
+                
+                            100% {
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        &:hover {
+                            .icon {
+                                animation: slideIn 0.5s ease-in forwards;
+                                
+                                @keyframes slideIn {
+                                    100% {
+                                        margin-right: 0;
+                                    }
+                        
+                                    0% {
+                                        margin-right: -100px;
+                                    }
+                                }
+                            }
+                            .check {
+                                animation: rotate 0.75s ease-in forwards;
+                                @keyframes rotate {
+                                    100% {
+                                        transform: rotate(0deg);
+                                    }
+                            
+                                    0% {
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                            }
+                        }
+                
+                        &__inner {
+                            width: 100%;
+                            padding: 15px 10px;
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
+                            display: flex;
+                            justify-content: space-between;
+                
+                            &__title{
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+
+                                .heading {
+                                    font-size: 1.1rem;
+                                    line-height: 35px;
+                                    letter-spacing: 0.05rem;
+                                    font-weight: 900;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            
+                                .subheading {
+                                    font-size: 1.1rem;
+                                    font-weight: 400;
+                                }
+                            }
+                            
+                            .price {
+                                font-size: 1rem;
+                                padding-top: 36px;
+                                padding-right: 10px;
+                                font-weight: 900;
+                            }
                         }
-            
-                        .subheading {
-                            font-size: 1.1rem;
-                            font-weight: 400;
+                        
+                        .icon {
+                            padding: 27px 15px;
+                            background-color: $tertiary-color;
+                            border-radius: 0 20px 20px 0;
+                            color: $white-color;
+                            margin-right: -100px;
                         }
-                    }
-            
-                    .price {
-                        font-size: 1rem;
-                        padding-top: 55px;
-                        font-weight: 900;
-                    }
-            
-                    .icon {
-                        padding: 27px 15px;
-                        background-color: $tertiary-color;
-                        border-radius: 0 20px 20px 0;
-                        color: $white-color;
-                        margin-right: -100px;
                     }
 
-                    @include desktop-only {
-                        width: 75%;
+                    .btn_1 {
+                        &:nth-child(1n) {
+                            animation-delay: 0.5s;
+                        }
+                    
+                        &:nth-child(2n) {
+                            animation-delay: 1s;
+                        }
+                    
+                        &:nth-child(3n) {
+                            animation-delay: 1.5s;
+                        }
+                        &:nth-child(4n) {
+                            animation-delay: 2s;
+                        }
+                    }
+                    .btn_2 {
+                        &:nth-child(1n) {
+                            animation-delay: 2.5s;
+                        }
+                    
+                        &:nth-child(2n) {
+                            animation-delay: 3s;
+                        }
+                    
+                        &:nth-child(3n) {
+                            animation-delay: 3.5s;
+                        }
+                    }
+                    .btn_3 {
+                        &:nth-child(1n) {
+                            animation-delay: 4s;
+                        }
+                    
+                        &:nth-child(2n) {
+                            animation-delay: 4.5s;
+                        }
+                    
+                        &:nth-child(3n) {
+                            animation-delay: 5s;
+                        }
                     }
                 }
 
-                .btn_1 {
-                    &:nth-child(1n) {
-                        animation-delay: 0.5s;
-                    }
-                
-                    &:nth-child(2n) {
-                        animation-delay: 1s;
-                    }
-                
-                    &:nth-child(3n) {
-                        animation-delay: 1.5s;
-                    }
-                    &:nth-child(4n) {
-                        animation-delay: 2s;
-                    }
-                }
-                .btn_2 {
-                    &:nth-child(1n) {
-                        animation-delay: 2.5s;
-                    }
-                
-                    &:nth-child(2n) {
-                        animation-delay: 3s;
-                    }
-                
-                    &:nth-child(3n) {
-                        animation-delay: 3.5s;
-                    }
-                }
-                .btn_3 {
-                    &:nth-child(1n) {
-                        animation-delay: 4s;
-                    }
-                
-                    &:nth-child(2n) {
-                        animation-delay: 4.5s;
-                    }
-                
-                    &:nth-child(3n) {
-                        animation-delay: 5s;
-                    }
+                @include desktop-only {
+                    width: 30%;
                 }
             }
 
-            &__btn {
-                margin-top: 50px;
-                text-align: center;
+            @include desktop-only {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
 
-                .btn {
-                    min-width: 200px;
-                    height: 50px;
-                    border-radius: 50px;
-                    border: transparent;
-                    box-shadow: -2px 4px 10px #e5e4e4, 2px 4px 10px #e5e4e4;
-                    background: linear-gradient(to top, $primary-color, $secondary-color);
-                    color: $white-color;
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    cursor: pointer;
+        &__btn {
+            margin-top: 50px;
+            text-align: center;
 
-                    &:hover {
-                        transform: scale(1.05);
-                        opacity: 0.9;
-                        box-shadow: -1px 3px 26px 5px rgba(0, 0, 0, 0.4);
-                    }
+            .btn {
+                min-width: 200px;
+                height: 50px;
+                border-radius: 50px;
+                border: transparent;
+                box-shadow: -2px 4px 10px #e5e4e4, 2px 4px 10px #e5e4e4;
+                background: linear-gradient(to top, $primary-color, $secondary-color);
+                color: $white-color;
+                font-size: 1.2rem;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.05);
+                    opacity: 0.9;
+                    box-shadow: -1px 3px 26px 5px rgba(0, 0, 0, 0.4);
                 }
             }
         }

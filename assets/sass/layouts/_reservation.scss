@@ -15,9 +15,9 @@
                 font-size: 1.3rem;
             }
 
-            @include desktop-only {
-                font-size: 1.3rem;
-            }
+            // @include desktop-only {
+            //     font-size: 1.3rem;
+            // }
         }
     }
 
@@ -47,10 +47,10 @@
                 font-size: 1.2rem;
             }
 
-            @include desktop-only {
-                width: 270px;
-                font-size: 1.2rem;
-            }
+            // @include desktop-only {
+            //     width: 270px;
+            //     font-size: 1.2rem;
+            // }
 
         }
     }
