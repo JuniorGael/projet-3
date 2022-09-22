@@ -57,18 +57,8 @@ a {
   justify-content: center;
   align-items: center;
   opacity: 1;
-  -webkit-animation: loading 200ms ease-in forwards;
-          animation: loading 200ms ease-in forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-@-webkit-keyframes loading {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
+  animation: loading 200ms ease-in forwards;
+  animation-delay: 3s;
 }
 @keyframes loading {
   0% {
@@ -83,23 +73,8 @@ a {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  -webkit-animation: load 1s ease-in-out infinite forwards;
-          animation: load 1s ease-in-out infinite forwards;
+  animation: load 1s ease-in-out infinite forwards;
   margin: auto;
-}
-@-webkit-keyframes load {
-  0% {
-    transform: rotate(0deg);
-    box-shadow: 1px 5px 2px #ff79da;
-  }
-  50% {
-    transform: rotate(180deg);
-    box-shadow: 1px 5px 2px #9356dc;
-  }
-  100% {
-    transform: rotate(360deg);
-    box-shadow: 1px 5px 2px #99e2d0;
-  }
 }
 @keyframes load {
   0% {
@@ -127,20 +102,11 @@ a {
 .loader-spin .loading {
   color: #9356dc;
   font-weight: bolder;
-  font-size: 40px;
-  text-transform: capitalize;
+  font-size: 30px;
   letter-spacing: 1.5px;
   line-height: 100px;
-  -webkit-animation: text 2s ease-in-out infinite;
-          animation: text 2s ease-in-out infinite;
-}
-@-webkit-keyframes text {
-  50% {
-    color: #ff79da;
-  }
-  100% {
-    color: #99e2d0;
-  }
+  font-family: "Shrikhand", cursive;
+  animation: text 2s ease-in-out infinite;
 }
 @keyframes text {
   50% {
@@ -197,8 +163,7 @@ a {
 }
 .main .image__img {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main .menu {
   background-color: #f6f6f6;
@@ -267,24 +232,11 @@ a {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  -webkit-animation-name: menu-load;
-          animation-name: menu-load;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: menu-load;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   opacity: 0;
   overflow: hidden;
-}
-@-webkit-keyframes menu-load {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 @keyframes menu-load {
   0% {
@@ -297,16 +249,7 @@ a {
   }
 }
 .main .menu .menuWrapper__items__container .btn:hover .icon {
-  -webkit-animation: slideIn 0.5s ease-in forwards;
-          animation: slideIn 0.5s ease-in forwards;
-}
-@-webkit-keyframes slideIn {
-  100% {
-    margin-right: 0;
-  }
-  0% {
-    margin-right: -100px;
-  }
+  animation: slideIn 0.5s ease-in forwards;
 }
 @keyframes slideIn {
   100% {
@@ -317,16 +260,7 @@ a {
   }
 }
 .main .menu .menuWrapper__items__container .btn:hover .check {
-  -webkit-animation: rotate 0.75s ease-in forwards;
-          animation: rotate 0.75s ease-in forwards;
-}
-@-webkit-keyframes rotate {
-  100% {
-    transform: rotate(0deg);
-  }
-  0% {
-    transform: rotate(360deg);
-  }
+  animation: rotate 0.75s ease-in forwards;
 }
 @keyframes rotate {
   100% {
@@ -377,44 +311,34 @@ a {
   margin-right: -100px;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(1n) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(2n) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(3n) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(4n) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 .main .menu .menuWrapper__items__container .btn_2:nth-child(1n) {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 .main .menu .menuWrapper__items__container .btn_2:nth-child(2n) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
 }
 .main .menu .menuWrapper__items__container .btn_2:nth-child(3n) {
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  animation-delay: 3.5s;
 }
 .main .menu .menuWrapper__items__container .btn_3:nth-child(1n) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  animation-delay: 4s;
 }
 .main .menu .menuWrapper__items__container .btn_3:nth-child(2n) {
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
+  animation-delay: 4.5s;
 }
 .main .menu .menuWrapper__items__container .btn_3:nth-child(3n) {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  animation-delay: 5s;
 }
 @media screen and (min-width: 992px) {
   .main .menu .menuWrapper__items {
@@ -615,8 +539,7 @@ a {
 }
 .card__container .link .item__image__img {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card__container .link .item__btm {
   display: flex;
