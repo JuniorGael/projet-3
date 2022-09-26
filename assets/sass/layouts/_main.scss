@@ -108,21 +108,14 @@
                         }
 
                         &:hover {
+                            .btn__inner {
+                                width: calc(100% - 65px);
+                            }
                             .icon {
-                                animation: slideIn 0.5s ease-in forwards;
-                                
-                                @keyframes slideIn {
-                                    100% {
-                                        margin-right: 0;
-                                    }
-
-                                    0% {
-                                        margin-right: -100px;
-                                    }
-                                }
+                                transform: translateX(0);
                             }
                             .check {
-                                animation: rotate 0.75s ease-in forwards;
+                                animation: rotate 0.5s ease-in forwards;
                                 @keyframes rotate {
                                     100% {
                                         transform: rotate(0deg);
@@ -136,6 +129,7 @@
                         }
                 
                         &__inner {
+                            position: relative;
                             width: 100%;
                             padding: 15px 10px;
                             white-space: nowrap;
@@ -143,6 +137,7 @@
                             text-overflow: ellipsis;
                             display: flex;
                             justify-content: space-between;
+                            transition: width 0.5s;
                 
                             &__title{
                                 white-space: nowrap;
@@ -178,50 +173,56 @@
                             background-color: $tertiary-color;
                             border-radius: 0 20px 20px 0;
                             color: $white-color;
-                            margin-right: -100px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            width: 65px;
+                            transform: translateX(65px);
+                            transition: transform 0.5s;
                         }
                     }
 
                     .btn_1 {
                         &:nth-child(1n) {
-                            animation-delay: 0.5s;
+                            animation-delay: 0;
                         }
                     
                         &:nth-child(2n) {
-                            animation-delay: 1s;
+                            animation-delay: 0.1s;
                         }
                     
                         &:nth-child(3n) {
-                            animation-delay: 1.5s;
+                            animation-delay: 0.2s;
                         }
                         &:nth-child(4n) {
-                            animation-delay: 2s;
+                            animation-delay: 0.3s;
                         }
                     }
                     .btn_2 {
                         &:nth-child(1n) {
-                            animation-delay: 2.5s;
+                            animation-delay: 0.4s;
                         }
                     
                         &:nth-child(2n) {
-                            animation-delay: 3s;
+                            animation-delay: 0.5s;
                         }
                     
                         &:nth-child(3n) {
-                            animation-delay: 3.5s;
+                            animation-delay: 0.6s;
                         }
                     }
                     .btn_3 {
                         &:nth-child(1n) {
-                            animation-delay: 4s;
+                            animation-delay: 0.7s;
                         }
                     
                         &:nth-child(2n) {
-                            animation-delay: 4.5s;
+                            animation-delay: 0.8s;
                         }
                     
                         &:nth-child(3n) {
-                            animation-delay: 5s;
+                            animation-delay: 0.9s;
                         }
                     }
                 }

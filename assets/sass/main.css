@@ -14,7 +14,6 @@ body {
 }
 
 .page-container {
-  min-width: 320px;
   background-color: #f6f6f6;
 }
 
@@ -49,7 +48,8 @@ a {
 }
 
 .loader-spin {
-  position: fixed;
+  position: absolute;
+  inset: 0;
   z-index: 1;
   background-color: #fff;
   width: 100%;
@@ -249,19 +249,14 @@ a {
     opacity: 1;
   }
 }
-.main .menu .menuWrapper__items__container .btn:hover .icon {
-  animation: slideIn 0.5s ease-in forwards;
+.main .menu .menuWrapper__items__container .btn:hover .btn__inner {
+  width: calc(100% - 65px);
 }
-@keyframes slideIn {
-  100% {
-    margin-right: 0;
-  }
-  0% {
-    margin-right: -100px;
-  }
+.main .menu .menuWrapper__items__container .btn:hover .icon {
+  transform: translateX(0);
 }
 .main .menu .menuWrapper__items__container .btn:hover .check {
-  animation: rotate 0.75s ease-in forwards;
+  animation: rotate 0.5s ease-in forwards;
 }
 @keyframes rotate {
   100% {
@@ -272,6 +267,7 @@ a {
   }
 }
 .main .menu .menuWrapper__items__container .btn__inner {
+  position: relative;
   width: 100%;
   padding: 15px 10px;
   white-space: nowrap;
@@ -279,6 +275,7 @@ a {
   text-overflow: ellipsis;
   display: flex;
   justify-content: space-between;
+  transition: width 0.5s;
 }
 .main .menu .menuWrapper__items__container .btn__inner__title {
   white-space: nowrap;
@@ -309,37 +306,43 @@ a {
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
   color: #fff;
-  margin-right: -100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  transform: translateX(65px);
+  transition: transform 0.5s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(1n) {
-  animation-delay: 0.5s;
+  animation-delay: 0;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(2n) {
-  animation-delay: 1s;
+  animation-delay: 0.1s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(3n) {
-  animation-delay: 1.5s;
+  animation-delay: 0.2s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(4n) {
-  animation-delay: 2s;
+  animation-delay: 0.3s;
 }
 .main .menu .menuWrapper__items__container .btn_2:nth-child(1n) {
-  animation-delay: 2.5s;
+  animation-delay: 0.4s;
 }
 .main .menu .menuWrapper__items__container .btn_2:nth-child(2n) {
-  animation-delay: 3s;
+  animation-delay: 0.5s;
 }
 .main .menu .menuWrapper__items__container .btn_2:nth-child(3n) {
-  animation-delay: 3.5s;
+  animation-delay: 0.6s;
 }
 .main .menu .menuWrapper__items__container .btn_3:nth-child(1n) {
-  animation-delay: 4s;
+  animation-delay: 0.7s;
 }
 .main .menu .menuWrapper__items__container .btn_3:nth-child(2n) {
-  animation-delay: 4.5s;
+  animation-delay: 0.8s;
 }
 .main .menu .menuWrapper__items__container .btn_3:nth-child(3n) {
-  animation-delay: 5s;
+  animation-delay: 0.9s;
 }
 @media screen and (min-width: 992px) {
   .main .menu .menuWrapper__items {
