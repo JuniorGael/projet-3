@@ -315,7 +315,7 @@ a {
   transition: transform 0.5s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(1n) {
-  animation-delay: 0;
+  animation-delay: 0s;
 }
 .main .menu .menuWrapper__items__container .btn_1:nth-child(2n) {
   animation-delay: 0.1s;
@@ -631,10 +631,10 @@ a {
   color: #99e2d0;
 }
 .footer__inner__list .icon1 {
-  padding-right: 15px;
+  padding-right: 18px;
 }
 .footer__inner__list .icon2 {
-  padding-right: 4px;
+  padding-right: 5px;
 }
 @media screen and (min-width: 992px) {
   .footer__inner {
