@@ -468,7 +468,7 @@ a {
   }
 }
 .functioning__btn .btn:hover {
-  background-color: hsl(267.3134328358deg, 100%, 95%);
+  background-color: hsl(267.3134328358, 100%, 95%);
 }
 .functioning__btn .btn:hover .icon {
   color: #9356dc;
